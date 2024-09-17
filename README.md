@@ -46,6 +46,8 @@ Below are the performance results of the XGBoost classifier on the test set:
 
 ![ROC-AUC Curve - XGBoost](images/roc_xgb.png)
 
+To ensure transparency and help users understand the limitations and biases in both the data and the model, we have included a datasheet and a model card in this project. These documents provide detailed insights into the dataset, model behavior, and potential risks. For more information, please refer to the [datasheet](data_sheet.md) and [model card](model_card.md) included in the project.
+
 ## Hyperparameter Tuning
 
 For hyperparameter tuning, we systematically applied Bayesian Optimisation to fine-tune our models. This method efficiently explores the hyperparameter space by balancing the exploration of new areas and the exploitation of promising regions, allowing for faster convergence on optimal solutions. Compared to traditional methods like Grid Search or Random Search, Bayesian Optimisation is more sample-efficient, which is particularly valuable when model evaluation is computationally expensive or when performance needs to be maximised within a limited number of iterations.
