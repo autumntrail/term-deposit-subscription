@@ -30,7 +30,7 @@ The dataset consists of 20 attributes, including both categorical and numerical 
 | poutcome  | Outcome of the previous marketing campaign (e.g., success, failure) |
 | y         | The target variable indicating whether the client subscribed to a term deposit (yes or no) |
 
-## Model evaluation and performance  
+## Model Evaluation
 
 In this project, we explored different models for binary classification to predict whether a customer would subscribe to a term deposit following a marketing call. The models we evaluated included Logistic Regression, Random Forests, Gradient Boosting, XGBoost, and Neural Networks. We started by splitting the data into training and test sets, and then used Bayesian Optimisation to fine-tune the hyperparameters, ensuring that each model was optimised for performance.
 
@@ -44,8 +44,21 @@ Below are the performance results of the XGBoost classifier on the test set:
 |-----------|-----------|-----------|-----------|-----------|-----------|
 | XGBoost | 0.8553 | 0.8656 | 0.9156 | 0.8656 | 0.8813 
 
-## Hyperparameter tuning
+## Hyperparameter Tuning
 Description of which hyperparameters you have and how you chose to optimise them. 
 
 ## Results
 
+## Actionable Insights
+
+The top contributing features — balance, duration and age — highlight that customer financial stability, campaign engagement, and demographics are critical in determining subscription likelihood. Our analysis reveals key insights that can help the marketing team develop strategies to boost subscription rates for the bank's term deposit campaign.
+
+| Feature | Recommendation | Explanation |
+| --- | --- | --- |
+| Balance | Target high-balance customers | With balance being a key predictor of term deposit subscriptions, the marketing team should focus on customers with higher account balances. Personalised offers or incentives for these customers could boost conversions, as they likely have the financial stability to invest and are prime candidates for the campaign. |
+| Duration | Enhance interaction quality | The duration of conversations strongly influences customer decisions. The marketing team should train agents to engage in longer, more meaningful discussions that highlight the benefits of the term deposit and address customer needs. Focusing on quality over quantity of calls can significantly improve results. |
+| Contact method | Prioritise direct and personal communication | Customers contacted via cellular channels are more likely to respond positively, suggesting that direct and personal communication works better than more passive methods. |
+| Timing | Release campaigns on high-conversion dates | Certain months, like May, and specific days of the week have higher conversion rates, highlighting the importance of campaign timing. The marketing team should focus on these optimal periods and use direct communication methods to boost success rates. |
+| Age | Leverage customer demographics | The model shows age as a key factor, with older customers slightly more likely to subscribe. Marketing efforts should be segmented by age group, using tailored messaging. Older customers may prefer safe, long-term investments like term deposits, while younger customers may need extra incentives. |
+
+By aligning campaign strategies with data analysis and model insights, the marketing team can better allocate resources, enhance customer engagement, and ultimately increase subscription rates for the bank's term deposit offerings.
