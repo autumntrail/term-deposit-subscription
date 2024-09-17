@@ -1,13 +1,13 @@
 # Datasheet Template
 
-As far as you can, complete the model datasheet. If you have got the data from the internet, you may not have all the information you need, but make sure you include all the information you do have. 
-
 ## Motivation
 
 - For what purpose was the dataset created?
+
 The [Bank Marketing Dataset](https://archive.ics.uci.edu/dataset/222/bank+marketing) was created to predict the likelihood of customers subscribing to a term deposit based on various customer and marketing campaign-related factors. It was designed to help banks and financial institutions better target potential customers by improving the effectiveness of marketing campaigns.
 
 - Who created the dataset (e.g., which team, research group) and on behalf of which entity (e.g., company, institution, organization)? Who funded the creation of the dataset?
+
 It was first introduced by a team from the University of Minho in Portugal, led by Paulo Cortez and Sérgio Moro, as part of academic research. The work is detailed in the paper titled "A Data-Driven Approach to Predict the Success of Bank Telemarketing." The dataset was made available for educational and research purposes.
 
 ## Composition
