@@ -44,6 +44,8 @@ Below are the performance results of the XGBoost classifier on the test set:
 |-----------|-----------|-----------|-----------|-----------|-----------|
 | XGBoost | 0.8553 | 0.8656 | 0.9156 | 0.8656 | 0.8813 
 
+![ROC-AUC Curve - XGBoost](images/roc_xgb.png)
+
 ## Hyperparameter Tuning
 Description of which hyperparameters you have and how you chose to optimise them. 
 
