@@ -57,7 +57,7 @@ The model was trained using the XGBoost classifier with the objective function s
 
 ## Performance
 
-We evaluate the performance of our XGBoost classifier using various metrics that offer insight into how well the model handles both majority and minority class predictions. Since the Bank Marketing dataset is imbalanced (with a higher proportion of customers not subscribing to a term deposit), using metrics beyond accuracy is essential to assess the model's true effectiveness. Specifically, the ROC-AUC score is a valuable metric for this kind of imbalanced dataset, as it captures the model's ability to distinguish between the positive and negative classes without being biased by class imbalances.
+We evaluated the performance of our XGBoost classifier using various metrics that offer insight into how well the model handles both majority and minority class predictions. Since the Bank Marketing dataset is imbalanced (with a higher proportion of customers not subscribing to a term deposit), using metrics beyond accuracy is essential to assess the model's true effectiveness. Specifically, the ROC-AUC score is a valuable metric for this kind of imbalanced dataset, as it captures the model's ability to distinguish between the positive and negative classes without being biased by class imbalances.
 
 Below are the results of the XGBoost classifier on the test set:
 
