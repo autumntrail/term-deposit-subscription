@@ -6,13 +6,13 @@
 
 The [Bank Marketing Dataset](https://archive.ics.uci.edu/dataset/222/bank+marketing) was created to predict the likelihood of customers subscribing to a term deposit based on various customer and marketing campaign-related factors. It was designed to help banks and financial institutions better target potential customers by improving the effectiveness of marketing campaigns.
 
-#### Who created the dataset (e.g., which team, research group) and on behalf of which entity (e.g., company, institution, organization)? Who funded the creation of the dataset?
+#### Who created the dataset and on behalf of which entity? Who funded the creation of the dataset?
 
 It was first introduced by a team from the University of Minho in Portugal, led by Paulo Cortez and Sérgio Moro, as part of academic research. The work is detailed in the paper titled "A Data-Driven Approach to Predict the Success of Bank Telemarketing." The dataset was made available for educational and research purposes.
 
 ## Composition
 
-#### What do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)? 
+#### What do the instances that comprise the dataset represent? 
 
 The instances in the dataset represent individual customers of a Portuguese bank who were targeted by a marketing campaign aimed at promoting the bank’s term deposit product. Each instance includes various attributes related to the customer’s demographics, financial situation, and interactions with the marketing campaign.
 
