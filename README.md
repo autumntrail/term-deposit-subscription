@@ -30,6 +30,10 @@ The dataset consists of 20 attributes, including both categorical and numerical 
 | poutcome  | Outcome of the previous marketing campaign (e.g., success, failure) |
 | y         | The target variable indicating whether the client subscribed to a term deposit (yes or no) |
 
+The target variable is imbalanced. Approximately 88% of the instances represent customers who did not subscribe, while only 12% correspond to successful subscriptions. This imbalance in the dataset id taken into consideration during modelling and evaluation stages, as it's likely to affect the model's ability to accurately predict the minority class.
+
+![Subscription Distribution](images/subscription_distribution.png)
+
 ## Model Evaluation
 
 In this project, we explored different models for binary classification to predict whether a customer would subscribe to a term deposit following a marketing call. The models we evaluated included Logistic Regression, Random Forests, Gradient Boosting, XGBoost, and Neural Networks. We started by splitting the data into training and test sets, and then used Bayesian Optimisation to fine-tune the hyperparameters, ensuring that each model was optimised for performance.
