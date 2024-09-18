@@ -36,6 +36,12 @@ The target variable is imbalanced. Approximately 88% of the instances represent 
 
 ![Subscription Distribution](images/subscription_distribution.png)
 
+## Hyperparameter Tuning
+
+For hyperparameter tuning, we systematically applied Bayesian Optimisation to fine-tune our models. This method efficiently explores the hyperparameter space by balancing the exploration of new areas and the exploitation of promising regions, allowing for faster convergence on optimal solutions. Compared to traditional methods like Grid Search or Random Search, Bayesian Optimisation is more sample-efficient, which is particularly valuable when model evaluation is computationally expensive or when performance needs to be maximised within a limited number of iterations.
+
+The `sklearn` Bayesian Optimisation class was used to search the hyperparameter space, with the goal of maximising the cross-validated ROC-AUC score. Once the optimal hyperparameters were identified, we retrained the machine learning models of interest using these settings and evaluated their performance on the test set to ensure the models' effectiveness with the tuned parameters.
+
 ## Model Evaluation
 
 In this project, we explored different models for binary classification to predict whether a customer would subscribe to a term deposit following a marketing call. The models we evaluated included Logistic Regression, Random Forests, Gradient Boosting, XGBoost, and Neural Networks. We started by splitting the data into training and test sets, and then used Bayesian Optimisation to fine-tune the hyperparameters, ensuring that each model was optimised for performance.
@@ -50,21 +56,29 @@ Below are the performance results of the XGBoost classifier on the test set:
 |-----------|-----------|-----------|-----------|-----------|-----------|
 | XGBoost | 0.8553 | 0.8656 | 0.9156 | 0.8656 | 0.8813 
 
+The ROC-AUC curve for the XGBoost model shows good performance, suggesting the model is reasonably effective at distinguishing between positive and negative classes. The curve's proximity to the top-left corner suggests an acceptable balance between the true positive rate and false positive rate.
+
 ![ROC-AUC Curve - XGBoost](images/roc_xgb.png)
+
+The calibration plot indicates that the model is fairly well-calibrated for most probability ranges, though it slightly overestimates the likelihood of positive outcomes at higher predicted probabilities. While the model's predictions are generally reliable, there may be some overconfidence in cases with high predicted probabilities.
+
+![Calibration Plot - XGBoost](images/calibration_plot_xgb.png)
 
 To ensure transparency and help users understand the limitations and biases in both the data and the model, we have included a datasheet and a model card in this project. These documents provide detailed insights into the dataset, model behavior, and potential risks. For more information, please refer to the [datasheet](data_sheet.md) and [model card](model_card.md) included in the project.
 
-## Hyperparameter Tuning
-
-For hyperparameter tuning, we systematically applied Bayesian Optimisation to fine-tune our models. This method efficiently explores the hyperparameter space by balancing the exploration of new areas and the exploitation of promising regions, allowing for faster convergence on optimal solutions. Compared to traditional methods like Grid Search or Random Search, Bayesian Optimisation is more sample-efficient, which is particularly valuable when model evaluation is computationally expensive or when performance needs to be maximised within a limited number of iterations.
-
-The `sklearn` Bayesian Optimisation class was used to search the hyperparameter space, with the goal of maximising the cross-validated ROC-AUC score. Once the optimal hyperparameters were identified, we retrained the machine learning models of interest using these settings and evaluated their performance on the test set to ensure the models' effectiveness with the tuned parameters.
-
 ## Results
 
-## Actionable Insights
+### Feature Importance
 
-The top contributing features — balance, duration and age — highlight that customer financial stability, campaign engagement, and demographics are critical in determining subscription likelihood. Our analysis reveals key insights that can help the marketing team develop strategies to boost subscription rates for the bank's term deposit campaign.
+In the feature importance analysis for our XGBoost model, the top three predictors driving customer subscription are `balance`, `duration`, and `age`. This indicates that a customer’s account balance, the length of previous interactions with the bank, and their age significantly influence the likelihood of subscription. Additionally, features like `day_of_week` and `pdays` (number of days since the last contact) also play a notable role, highlighting the importance of timing and engagement frequency in marketing outcomes.
+
+![Feature Importance](images/feature_importance.png)
+
+Understanding these influential features provides valuable insights into customer behaviour, helping us prioritisse key factors that drive the model’s performance and tailor future marketing strategies more effectively.
+
+### Actionable Insights
+
+Our analysis, which included XGBoost feature importance, exploratory data analysis (EDA), and prediction evaluation, provided soome key insights that can help the marketing team develop strategies to improve subscription rates for the bank's term deposit campaign.
 
 | Feature | Recommendation | Explanation |
 | --- | --- | --- |
