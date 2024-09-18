@@ -1,5 +1,7 @@
 # Data-Driven Predictions for Term Deposit Subscriptions
 
+Jupyter Notebook featuring EDA, model experimentation, hyperparameter tuning strategy, prediction results, and actionable insights can be found [here](term_deposit_prediction_notebook.ipynb).
+
 ## Business Motivation
 
 This project focuses on improving the effectiveness of bank marketing campaigns by predicting which customers are most likely to subscribe to a term deposit after a marketing call. Using machine learning, we aim to help banks target the right audience, reduce wasted efforts, and boost conversion rates. By accurately predicting customer responses, banks can allocate resources more efficiently, tailor campaigns to individual customers, and ultimately increase marketing success. Additionally, the model can provide insights into the key factors influencing customer decisions, helping shape more effective strategies for future campaigns.
