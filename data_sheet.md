@@ -1,4 +1,4 @@
-# Datasheet Template
+# Datasheet
 
 ## Motivation
 
@@ -30,27 +30,63 @@ While the dataset does not include sensitive communications or legally protected
 
 ## Collection process
 
-- How was the data acquired? 
-- If the data is a sample of a larger subset, what was the sampling strategy? 
-- Over what time frame was the data collected?
+#### How was the data acquired? 
+
+The data was acquired through direct marketing campaigns conducted by a Portuguese bank. These campaigns involved contacting customers, primarily through phone calls, to promote a term deposit product. Information about the customers and their responses to the campaign were recorded, along with various demographic and financial details.
+
+#### If the data is a sample of a larger subset, what was the sampling strategy? 
+
+The exact sampling strategy is not explicitly detailed, but the dataset appears to include a broad cross-section of customers, capturing a range of demographic and financial characteristics. There is no evidence of specific stratified or randomised sampling being applied.
+
+#### Over what time frame was the data collected?
+
+The data was collected over several campaigns conducted between May 2008 and November 2010. 
 
 ## Preprocessing/cleaning/labelling
 
-- Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? If so, please provide a description. If not, you may skip the remaining questions in this section. 
-- Was the “raw” data saved in addition to the preprocessed/cleaned/labeled data (e.g., to support unanticipated future uses)? 
+#### Was any preprocessing/cleaning/labeling of the data done? If so, please provide a description. If not, you may skip the remaining questions in this section. 
+
+No known complex preprocessing steps, such as discretisation, scaling, or feature extraction, were applied in the original dataset.
+
+#### Was the “raw” data saved in addition to the preprocessed/cleaned/labeled data (e.g., to support unanticipated future uses)? 
+
+The categorical features in the publicly available dataset are still in their original string format. No mention is made of the availability of a completely raw, unprocessed version of the data.
  
 ## Uses
 
-- What other tasks could the dataset be used for? 
-- Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a dataset consumer might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g., stereotyping, quality of service issues) or other risks or harms (e.g., legal risks, financial harms)? If so, please provide a description. Is there anything a dataset consumer could do to mitigate these risks or harms? 
-- Are there tasks for which the dataset should not be used? If so, please provide a description.
+#### What other tasks could the dataset be used for?
+
+In addition to predicting term deposit subscriptions, the dataset could be used for other tasks such as:
+
+- **Customer segmentation**: identifying distinct groups of customers based on demographics and financial behaviours to personalise marketing strategies.
+- **Campaign performance analysis**: evaluating the effectiveness of different marketing approaches (e.g., call duration, previous outcomes) on customer responses.
+- **Financial behavior analysis**: understanding the relationship between customer demographics and financial decisions, such as savings or investment behaviours.
+
+#### Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a dataset consumer might need to know to avoid uses that could result in unfair treatment of individuals or groups or other risks or harms? If so, please provide a description. Is there anything a dataset consumer could do to mitigate these risks or harms? 
+
+Yes, certain aspects of the dataset's composition could affect its future use:
+
+- **Bias in data collection**: the dataset includes sensitive features like age, education, and marital status, which could introduce bias if not handled carefully. For instance, relying heavily on these attributes for marketing decisions could result in unfair treatment or exclusion of specific demographic groups.
+- **Imbalanced classes**: the target variable (term deposit subscription) is imbalanced, with fewer positive (subscribed) cases. This imbalance can lead to models overfitting the majority class and struggling to accurately predict the minority class.
+
+To address these concerns, users should ensure their models do not unfairly target or exclude certain groups, and may need to apply techniques like class rebalancing or fairness-aware algorithms to improve model performance and fairness.
+
+#### Are there tasks for which the dataset should not be used? If so, please provide a description.
+
+The dataset should not be used for tasks that could lead to discriminatory outcomes or unfair treatment based on personal characteristics like age, marital status, or education level. For example, it should not be used to make automated decisions that disadvantage certain demographic groups in terms of access to financial products or services. Additionally, it should not be used for applications that might cause legal risks, such as violating data privacy regulations if re-identifiable information is inferred.
 
 ## Distribution
 
-- How has the dataset already been distributed? 
-- Is it subject to any copyright or other intellectual property (IP) license, and/or under applicable terms of use (ToU)?  
+#### How has the dataset already been distributed? 
+
+The dataset has been made publicly available through the UCI Machine Learning Repository. It is accessible for download by researchers, students, and professionals for academic and research purposes.
+
+#### Is it subject to any copyright or other intellectual property (IP) license, and/or under applicable terms of use (ToU)?
+
+The dataset is provided under the terms and conditions outlined by the UCI Machine Learning Repository. While no explicit copyright or IP license is specified, users are expected to adhere to academic and ethical standards when using the data, including appropriate citation of the source and authors in any published work. The original dataset creators should be credited, specifically referencing the paper "A Data-Driven Approach to Predict the Success of Bank Telemarketing" by Paulo Cortez and Sérgio Moro.
 
 ## Maintenance
 
-- Who maintains the dataset?
+#### Who maintains the dataset?
 
+The dataset is maintained by the UCI Machine Learning Repository, which hosts and provides access to the dataset. However, the original creators, Paulo Cortez and Sérgio Moro, are responsible for the initial creation and documentation of the dataset. No formal ongoing maintenance or updates to the dataset have been indicated by the authors.
