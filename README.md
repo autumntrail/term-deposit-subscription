@@ -32,7 +32,7 @@ The dataset consists of 20 attributes, including both categorical and numerical 
 | poutcome  | Outcome of the previous marketing campaign (e.g., success, failure) |
 | y         | The target variable indicating whether the client subscribed to a term deposit (yes or no) |
 
-The target variable is imbalanced. Approximately 88% of the instances represent customers who did not subscribe, while only 12% correspond to successful subscriptions. This imbalance in the dataset id taken into consideration during modelling and evaluation stages, as it's likely to affect the model's ability to accurately predict the minority class.
+The target variable is imbalanced. Approximately 88% of the instances represent customers who did not subscribe, while only 12% correspond to successful subscriptions. This imbalance in the dataset is taken into consideration during modelling and evaluation stages, as it's likely to affect the model's ability to accurately predict the minority class.
 
 ![Subscription Distribution](images/subscription_distribution.png)
 
@@ -44,9 +44,9 @@ The `sklearn` Bayesian Optimisation class was used to search the hyperparameter 
 
 ## Model Evaluation
 
-In this project, we explored different models for binary classification to predict whether a customer would subscribe to a term deposit following a marketing call. The models we evaluated included Logistic Regression, Random Forests, Gradient Boosting, XGBoost, and Neural Networks. We started by splitting the data into training and test sets, and then used Bayesian Optimisation to fine-tune the hyperparameters, ensuring that each model was optimised for performance.
+In this project, we explored different models for binary classification to predict whether a customer would subscribe to a term deposit following a marketing call. The models we evaluated included `Logistic Regression`, `Random Forest`, `Gradient Boosting`, `XGBoost`, and `Neural Networks`. We started by splitting the data into training and test sets, and then applied Bayesian Optimisation to fine-tune the hyperparameters, ensuring that each model was optimised for performance.
 
-Due to the imbalanced nature of the dataset, we prioritised the ROC-AUC score as the main metric for evaluating model effectiveness, while also using confusion matrices to gain additional insights. In addition to ROC-AUC, we assessed other performance metrics such as accuracy, precision, recall, and F1 scores. We also considered factors like data complexity, model interpretability, and computational resources during model selection. 
+Due to the imbalanced nature of the dataset, we prioritised the ROC-AUC score as the main metric for evaluating model effectiveness, while also using confusion matrices to gain additional insights. In addition to ROC-AUC, we assessed other performance metrics such as accuracy, precision, recall, and F1 scores during model selection. We also took in consideration factors like data complexity, model interpretability, and computational resources.
 
 Based on our evaluation, XGBoost emerged as the best-performing model for predicting customer subscriptions. It provided a good balance between predictive accuracy and practical considerations such as interpretability. While no model delivered perfect predictions, XGBoost performed well across key metrics and offered the best trade-off between precision, recall, and ROC-AUC, making it well-suited for handling the imbalanced nature of the dataset. 
 
@@ -64,7 +64,7 @@ The calibration plot indicates that the model is fairly well-calibrated for most
 
 ![Calibration Plot - XGBoost](images/calibration_plot_xgb.png)
 
-To ensure transparency and help users understand the limitations and biases in both the data and the model, we have included a datasheet and a model card in this project. These documents provide detailed insights into the dataset, model behavior, and potential risks. For more information, please refer to the [datasheet](data_sheet.md) and [model card](model_card.md) included in the project.
+To ensure transparency and help users understand the limitations and biases in both the data and the model, we have included a datasheet and a model card in this project. These documents provide detailed insights into the dataset, model behaviour, and potential risks. For more information, please refer to the [datasheet](data_sheet.md) and [model card](model_card.md) included in the project.
 
 ## Results
 
@@ -74,7 +74,7 @@ In the feature importance analysis for our XGBoost model, the top three predicto
 
 ![Feature Importance](images/feature_importance.png)
 
-Understanding these influential features provides valuable insights into customer behaviour, helping us prioritisse key factors that drive the model’s performance and tailor future marketing strategies more effectively.
+Understanding these influential features provides valuable insights into customer behaviour, helping us prioritise key factors that drive the model’s performance and tailor future marketing strategies more effectively.
 
 ### Actionable Insights
 
